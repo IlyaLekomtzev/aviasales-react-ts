@@ -1,0 +1,65 @@
+.offer-item{
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+  transition: box-shadow .2s linear;
+
+  &:hover{
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+  }
+
+  &__header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__price{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    color: #2196F3;
+  }
+
+  &__logo{
+    width: 110px;
+
+    img{
+      width: 100%;
+    }
+  }
+
+  &__body{
+    width: 100%;
+    padding-top: 10px;
+  }
+
+  &__way{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+  }
+
+  &__info{
+    flex: 1;
+  }
+  &__info-title{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #A0B0B9;
+  }
+  &__info-value{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: #4A4A4A;
+  }
+}
