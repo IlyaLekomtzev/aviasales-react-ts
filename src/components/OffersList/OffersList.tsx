@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { OfferItem, MoreButton } from '../../components';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 import { incrementStep, getTickets } from '../../store/reducers/ActionCreators';
-import { SortNames, OFFERS_COUNT } from '../../const';
+import { OFFERS_COUNT } from '../../const';
 import { sortTickets } from '../../utils/sort';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
