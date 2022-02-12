@@ -3,15 +3,15 @@ import { ITicket, ITicketResponse } from '../../models/ITicket';
 import { SortNames } from '../../const';
 
 interface TicketState {
-    searchId: string,
-    tickets: ITicket[],
-    isLoading: boolean,
-    error: string,
-    step: number,
-    stop: boolean,
-    sort: SortNames,
-    filters: string[],
-}
+    searchId: string;
+    tickets: ITicket[];
+    isLoading: boolean;
+    error: string;
+    step: number;
+    stop: boolean;
+    sort: SortNames;
+    filters: string[];
+};
 
 const initialState: TicketState = {
     searchId: '',
@@ -22,7 +22,7 @@ const initialState: TicketState = {
     stop: false,
     sort: SortNames.Cheap,
     filters: [],
-}
+};
 
 export const ticketSlice = createSlice({
     name: 'ticket',

@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 import { ITicket } from '../../models/ITicket';
 import { getPeriodTime, getTravelTime } from '../../utils/datetime';
 import './OfferItem.scss';
@@ -7,7 +7,7 @@ interface IOfferItemProps {
     offer: ITicket
 }
 
-const OfferItem: React.FC<IOfferItemProps> = ({ offer }): JSX.Element => {
+const OfferItem: FC<IOfferItemProps> = ({ offer }): JSX.Element => {
     return (
         <div className="offer-item">
             <div className="offer-item__header">

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { FC, useEffect } from 'react';
 import {
     Header,
     FiltersSidebar,
@@ -9,7 +9,7 @@ import { useAppDispatch } from './hooks/redux';
 import { getTickets } from './store/reducers/ActionCreators';
 import './App.scss';
 
-const App: React.FC = (): JSX.Element => {
+const App: FC = (): JSX.Element => {
     const dispatch = useAppDispatch();
 
     useEffect(() => {

@@ -19,19 +19,19 @@ export const getTickets = () => async (dispatch: AppDispatch) => {
     } catch (e) {
         dispatch(ticketSlice.actions.ticketsGettingFailure());
     }
-}
+};
 
 export const incrementStep = () => (dispatch: AppDispatch) => {
     dispatch(ticketSlice.actions.incrementStep());
-}
+};
 
 export const setSort = (sort: SortNames) => (dispatch: AppDispatch) => {
     dispatch(ticketSlice.actions.setSort(sort));
-}
+};
 
 export const setFilter = (filter: string[]) => (dispatch: AppDispatch) => {
     dispatch(ticketSlice.actions.setFilter(filter));
-}
+};
 
 const getSearchId = async () => {
     try {
@@ -41,4 +41,4 @@ const getSearchId = async () => {
         console.error(e);
         return false;
     }
-}
+};

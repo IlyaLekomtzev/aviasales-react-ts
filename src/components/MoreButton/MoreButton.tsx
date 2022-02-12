@@ -1,12 +1,12 @@
-import React from 'react';
+import { FC, MouseEvent } from 'react';
 import { OFFERS_COUNT } from '../../const';
 import './MoreButton.scss';
 
 interface IMoreButtonProps {
-    onClick: (e: React.MouseEvent<HTMLElement>) => void;
+    onClick: (e: MouseEvent<HTMLElement>) => void;
 }
 
-const MoreButton: React.FC<IMoreButtonProps> = ({ onClick, ...props }): JSX.Element => {
+const MoreButton: FC<IMoreButtonProps> = ({ onClick, ...props }): JSX.Element => {
     return (
         <button
             type="button"

@@ -1,14 +1,14 @@
-import React from 'react';
+import { FC, ChangeEvent } from 'react';
 import { useAppSelector, useAppDispatch } from '../../hooks/redux';
 import { setFilter } from '../../store/reducers/ActionCreators';
 import { filtersValues } from '../../const';
 import './FiltersSidebar.scss';
 
-const FiltersSidebar: React.FC = (): JSX.Element => {
-    const filters = useAppSelector(({ticketReducer}) => ticketReducer.filters);
+const FiltersSidebar: FC = (): JSX.Element => {
+    const { filters, error } = useAppSelector(({ticketReducer}) => ticketReducer);
     const dispatch = useAppDispatch();
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         if (e.target.checked) {
             dispatch(setFilter([...filters, e.target.value]));
         } else {
@@ -28,6 +28,7 @@ const FiltersSidebar: React.FC = (): JSX.Element => {
                         className="filters-sidebar__checkbox-input"
                         value="0"
                         checked={!filters.length}
+                        disabled={!!error}
                         onChange={() => dispatch(setFilter([]))}
                     />
                     <span className="filters-sidebar__checkbox-text">Все</span>
@@ -41,6 +42,7 @@ const FiltersSidebar: React.FC = (): JSX.Element => {
                             className="filters-sidebar__checkbox-input"
                             value={value}
                             checked={filters.includes(value+'')}
+                            disabled={!!error}
                             onChange={handleChange}
                         />
                         <span className="filters-sidebar__checkbox-text">{title}</span>
